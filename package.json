@@ -1,0 +1,58 @@
+{
+	"name": "userfunctions",
+	"displayName": "UserFunctions",
+	"description": "",
+	"version": "0.0.1",
+	"publisher": "roadsidejesus",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:userFunctions.jumpDown5",
+		"onCommand:userFunctions.jumpUp5",
+		"onCommand:userFunctions.scrollUp",
+		"onCommand:userFunctions.scrollDown"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "userFunctions.jumpDown5",
+				"title": "User: Jump Down By 5 Lines"
+			},
+			{
+				"command": "userFunctions.jumpUp5",
+				"title": "User: Jump Up By 5 Lines"
+			},
+			{
+				"command": "userFunctions.scrollUp",
+				"title": "User: Scroll up"
+			},
+			{
+				"command": "userFunctions.scrollDown",
+				"title": "User: Scroll down"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.40.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"tslint": "^5.20.0",
+		"vscode-test": "^1.2.2"
+	}
+}
